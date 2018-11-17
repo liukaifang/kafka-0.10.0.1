@@ -190,6 +190,7 @@ public final class RecordAccumulator {
                     free.deallocate(buffer);
                     return appendResult;
                 }
+                //TODO    RecordAccumulator ———> MemoryRecords
                 MemoryRecords records = MemoryRecords.emptyRecords(buffer, compression, this.batchSize);
                 RecordBatch batch = new RecordBatch(tp, records, time.milliseconds());
                 FutureRecordMetadata future = Utils.notNull(batch.tryAppend(timestamp, key, value, callback, time.milliseconds()));
