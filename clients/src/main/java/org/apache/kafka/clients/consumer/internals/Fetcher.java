@@ -68,6 +68,7 @@ import java.util.Set;
 
 /**
  * This class manage the fetching process with the brokers.
+ * 消费者拉取线程
  */
 public class Fetcher<K, V> {
 

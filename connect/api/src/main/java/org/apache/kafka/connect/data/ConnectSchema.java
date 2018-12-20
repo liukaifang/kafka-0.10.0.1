@@ -15,6 +15,7 @@
  * limitations under the License.
  **/
 
+
 package org.apache.kafka.connect.data;
 
 import org.apache.kafka.connect.errors.DataException;
