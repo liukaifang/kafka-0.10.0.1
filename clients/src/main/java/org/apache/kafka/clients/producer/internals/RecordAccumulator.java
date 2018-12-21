@@ -3,9 +3,9 @@
  * file distributed with this work for additional information regarding copyright ownership. The ASF licenses this file
  * to You under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the
  * License. You may obtain a copy of the License at
- * 
+ * <p>
  * http://www.apache.org/licenses/LICENSE-2.0
- * 
+ * <p>
  * Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
@@ -76,25 +76,19 @@ public final class RecordAccumulator {
 
     /**
      * Create a new record accumulator
-     * 
-     * @param batchSize The size to use when allocating {@link org.apache.kafka.common.record.MemoryRecords} instances
-     * @param totalSize The maximum memory the record accumulator can use.
-     * @param compression The compression codec for the records
-     * @param lingerMs An artificial delay time to add before declaring a records instance that isn't full ready for
-     *        sending. This allows time for more records to arrive. Setting a non-zero lingerMs will trade off some
-     *        latency for potentially better throughput due to more batching (and hence fewer, larger requests).
+     *
+     * @param batchSize      The size to use when allocating {@link org.apache.kafka.common.record.MemoryRecords} instances
+     * @param totalSize      The maximum memory the record accumulator can use.
+     * @param compression    The compression codec for the records
+     * @param lingerMs       An artificial delay time to add before declaring a records instance that isn't full ready for
+     *                       sending. This allows time for more records to arrive. Setting a non-zero lingerMs will trade off some
+     *                       latency for potentially better throughput due to more batching (and hence fewer, larger requests).
      * @param retryBackoffMs An artificial delay time to retry the produce request upon receiving an error. This avoids
-     *        exhausting all retries in a short period of time.
-     * @param metrics The metrics
-     * @param time The time instance to use
+     *                       exhausting all retries in a short period of time.
+     * @param metrics        The metrics
+     * @param time           The time instance to use
      */
-    public RecordAccumulator(int batchSize,
-                             long totalSize,
-                             CompressionType compression,
-                             long lingerMs,
-                             long retryBackoffMs,
-                             Metrics metrics,
-                             Time time) {
+    public RecordAccumulator(int batchSize, long totalSize, CompressionType compression, long lingerMs, long retryBackoffMs, Metrics metrics, Time time) {
         this.drainIndex = 0;
         this.closed = false;
         this.flushesInProgress = new AtomicInteger(0);
@@ -148,11 +142,11 @@ public final class RecordAccumulator {
      * The append result will contain the future metadata, and flag for whether the appended batch is full or a new batch is created
      * <p>
      *
-     * @param tp The topic/partition to which this record is being sent
-     * @param timestamp The timestamp of the record
-     * @param key The key for the record
-     * @param value The value for the record
-     * @param callback The user-supplied callback to execute when the request is complete
+     * @param tp             The topic/partition to which this record is being sent
+     * @param timestamp      The timestamp of the record
+     * @param key            The key for the record
+     * @param value          The value for the record
+     * @param callback       The user-supplied callback to execute when the request is complete
      * @param maxTimeToBlock The maximum time in milliseconds to block for buffer memory to be available
      */
     public RecordAppendResult append(TopicPartition tp,
@@ -285,15 +279,15 @@ public final class RecordAccumulator {
      * <ol>
      * <li>There is at least one partition that is not backing off its send
      * <li><b>and</b> those partitions are not muted (to prevent reordering if
-     *   {@value org.apache.kafka.clients.producer.ProducerConfig#MAX_IN_FLIGHT_REQUESTS_PER_CONNECTION}
-     *   is set to one)</li>
+     * {@value org.apache.kafka.clients.producer.ProducerConfig#MAX_IN_FLIGHT_REQUESTS_PER_CONNECTION}
+     * is set to one)</li>
      * <li><b>and <i>any</i></b> of the following are true</li>
      * <ul>
-     *     <li>The record set is full</li>
-     *     <li>The record set has sat in the accumulator for at least lingerMs milliseconds</li>
-     *     <li>The accumulator is out of memory and threads are blocking waiting for data (in this case all partitions
-     *     are immediately considered ready).</li>
-     *     <li>The accumulator has been closed</li>
+     * <li>The record set is full</li>
+     * <li>The record set has sat in the accumulator for at least lingerMs milliseconds</li>
+     * <li>The accumulator is out of memory and threads are blocking waiting for data (in this case all partitions
+     * are immediately considered ready).</li>
+     * <li>The accumulator has been closed</li>
      * </ul>
      * </ol>
      */
@@ -354,11 +348,11 @@ public final class RecordAccumulator {
     /**
      * Drain all the data for the given nodes and collate them into a list of batches that will fit within the specified
      * size on a per-node basis. This method attempts to avoid choosing the same topic-node over and over.
-     * 
+     *
      * @param cluster The current cluster metadata
-     * @param nodes The list of node to drain
+     * @param nodes   The list of node to drain
      * @param maxSize The maximum number of bytes to drain
-     * @param now The current unix time in milliseconds
+     * @param now     The current unix time in milliseconds
      * @return A list of {@link RecordBatch} for each node specified with total size less than the requested maxSize.
      */
     public Map<Integer, List<RecordBatch>> drain(Cluster cluster,
@@ -438,10 +432,10 @@ public final class RecordAccumulator {
         incomplete.remove(batch);
         free.deallocate(batch.records.buffer(), batch.records.initialCapacity());
     }
-    
+
     /**
      * Are there any threads currently waiting on a flush?
-     *
+     * <p>
      * package private for test
      */
     boolean flushInProgress() {
@@ -452,7 +446,7 @@ public final class RecordAccumulator {
     Map<TopicPartition, Deque<RecordBatch>> batches() {
         return Collections.unmodifiableMap(batches);
     }
-    
+
     /**
      * Initiate the flushing of data from the accumulator...this makes all requests immediately ready
      */
@@ -558,7 +552,7 @@ public final class RecordAccumulator {
             this.unknownLeadersExist = unknownLeadersExist;
         }
     }
-    
+
     /*
      * A threadsafe helper class to hold RecordBatches that haven't been ack'd yet
      */
@@ -568,13 +562,13 @@ public final class RecordAccumulator {
         public IncompleteRecordBatches() {
             this.incomplete = new HashSet<RecordBatch>();
         }
-        
+
         public void add(RecordBatch batch) {
             synchronized (incomplete) {
                 this.incomplete.add(batch);
             }
         }
-        
+
         public void remove(RecordBatch batch) {
             synchronized (incomplete) {
                 boolean removed = this.incomplete.remove(batch);
@@ -582,7 +576,7 @@ public final class RecordAccumulator {
                     throw new IllegalStateException("Remove from the incomplete set failed. This should be impossible.");
             }
         }
-        
+
         public Iterable<RecordBatch> all() {
             synchronized (incomplete) {
                 return new ArrayList<>(this.incomplete);
