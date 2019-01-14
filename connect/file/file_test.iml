@@ -10,7 +10,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="file_main" />
-    <orderEntry type="module" module-name="api_main" />
     <orderEntry type="library" name="Gradle: org.slf4j:slf4j-api:1.7.21" level="project" />
     <orderEntry type="library" name="Gradle: org.easymock:easymock:3.4" level="project" />
     <orderEntry type="library" name="Gradle: junit:junit:4.12" level="project" />
@@ -26,8 +25,8 @@
     <orderEntry type="library" name="Gradle: net.jpountz.lz4:lz4:1.3.0" level="project" />
     <orderEntry type="library" name="Gradle: org.xerial.snappy:snappy-java:1.1.2.6" level="project" />
     <orderEntry type="library" name="Gradle: org.powermock:powermock-core:1.6.4" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Gradle: log4j:log4j:1.2.17" level="project" />
     <orderEntry type="library" name="Gradle: org.powermock:powermock-reflect:1.6.4" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: log4j:log4j:1.2.17" level="project" />
     <orderEntry type="library" name="Gradle: org.javassist:javassist:3.20.0-GA" level="project" />
   </component>
   <component name="TestModuleProperties" production-module="file_main" />

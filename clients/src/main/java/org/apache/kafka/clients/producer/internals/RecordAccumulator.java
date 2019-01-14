@@ -355,10 +355,7 @@ public final class RecordAccumulator {
      * @param now     The current unix time in milliseconds
      * @return A list of {@link RecordBatch} for each node specified with total size less than the requested maxSize.
      */
-    public Map<Integer, List<RecordBatch>> drain(Cluster cluster,
-                                                 Set<Node> nodes,
-                                                 int maxSize,
-                                                 long now) {
+    public Map<Integer, List<RecordBatch>> drain(Cluster cluster, Set<Node> nodes, int maxSize, long now) {
         if (nodes.isEmpty())
             return Collections.emptyMap();
 

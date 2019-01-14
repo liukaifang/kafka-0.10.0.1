@@ -15,6 +15,8 @@
       <module name="clients_main" target="1.7" />
       <module name="clients_test" target="1.7" />
       <module name="connect" target="1.7" />
+      <module name="connect-api_main" target="1.7" />
+      <module name="connect-api_test" target="1.7" />
       <module name="connect_main" target="1.7" />
       <module name="connect_test" target="1.7" />
       <module name="core" target="1.7" />
@@ -316,6 +318,8 @@
       <module fileurl="file://$PROJECT_DIR$/clients/clients_main.iml" filepath="$PROJECT_DIR$/clients/clients_main.iml" group="clients" />
       <module fileurl="file://$PROJECT_DIR$/clients/clients_test.iml" filepath="$PROJECT_DIR$/clients/clients_test.iml" group="clients" />
       <module fileurl="file://$PROJECT_DIR$/connect/connect.iml" filepath="$PROJECT_DIR$/connect/connect.iml" group="connect" />
+      <module fileurl="file://$PROJECT_DIR$/connect/api/connect-api_main.iml" filepath="$PROJECT_DIR$/connect/api/connect-api_main.iml" group="connect/api" />
+      <module fileurl="file://$PROJECT_DIR$/connect/api/connect-api_test.iml" filepath="$PROJECT_DIR$/connect/api/connect-api_test.iml" group="connect/api" />
       <module fileurl="file://$PROJECT_DIR$/connect/connect_main.iml" filepath="$PROJECT_DIR$/connect/connect_main.iml" group="connect" />
       <module fileurl="file://$PROJECT_DIR$/connect/connect_test.iml" filepath="$PROJECT_DIR$/connect/connect_test.iml" group="connect" />
       <module fileurl="file://$PROJECT_DIR$/core/core.iml" filepath="$PROJECT_DIR$/core/core.iml" group="core" />

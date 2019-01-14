@@ -10,7 +10,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="json_main" />
-    <orderEntry type="module" module-name="api_main" />
     <orderEntry type="library" name="Gradle: com.fasterxml.jackson.core:jackson-databind:2.6.3" level="project" />
     <orderEntry type="library" name="Gradle: org.slf4j:slf4j-api:1.7.21" level="project" />
     <orderEntry type="library" name="Gradle: org.easymock:easymock:3.4" level="project" />
