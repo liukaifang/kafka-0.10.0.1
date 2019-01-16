@@ -149,12 +149,7 @@ public final class RecordAccumulator {
      * @param callback       The user-supplied callback to execute when the request is complete
      * @param maxTimeToBlock The maximum time in milliseconds to block for buffer memory to be available
      */
-    public RecordAppendResult append(TopicPartition tp,
-                                     long timestamp,
-                                     byte[] key,
-                                     byte[] value,
-                                     Callback callback,
-                                     long maxTimeToBlock) throws InterruptedException {
+    public RecordAppendResult append(TopicPartition tp, long timestamp, byte[] key, byte[] value, Callback callback, long maxTimeToBlock) throws InterruptedException {
         // We keep track of the number of appending thread to make sure we do not miss batches in
         // abortIncompleteBatches().
         appendsInProgress.incrementAndGet();

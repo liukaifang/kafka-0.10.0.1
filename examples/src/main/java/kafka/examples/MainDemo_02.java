@@ -1,8 +1,10 @@
 package kafka.examples;
 
-import java.util.concurrent.ArrayBlockingQueue;
-import java.util.concurrent.atomic.AtomicLong;
+import org.junit.Test;
 
+import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.atomic.AtomicLong;
 
 public class MainDemo_02 {
 
@@ -19,4 +21,13 @@ public class MainDemo_02 {
         }
         System.out.println(queue.toArray());
     }
+
+    @Test
+    public void test() {
+        ConcurrentHashMap<Object, Object> map = new ConcurrentHashMap<>();
+        map.put("a", 123);
+        System.out.println(map.putIfAbsent("a", 22));
+        System.out.println(map.putIfAbsent("b", 22));
+    }
+
 }

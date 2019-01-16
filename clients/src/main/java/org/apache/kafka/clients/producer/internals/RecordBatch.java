@@ -86,10 +86,7 @@ public final class RecordBatch {
      * @param exception The exception that occurred (or null if the request was successful)
      */
     public void done(long baseOffset, long timestamp, RuntimeException exception) {
-        log.trace("Produced messages to topic-partition {} with base offset offset {} and error: {}.",
-                topicPartition,
-                baseOffset,
-                exception);
+        log.trace("Produced messages to topic-partition {} with base offset offset {} and error: {}.", topicPartition, baseOffset, exception);
         // execute callbacks
         for (int i = 0; i < this.thunks.size(); i++) {
             try {
