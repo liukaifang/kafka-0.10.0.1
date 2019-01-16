@@ -720,8 +720,7 @@ public class KafkaProducer<K, V> implements Producer<K, V> {
             }
             return partition;
         }
-        return this.partitioner.partition(record.topic(), record.key(), serializedKey, record.value(), serializedValue,
-                cluster);
+        return this.partitioner.partition(record.topic(), record.key(), serializedKey, record.value(), serializedValue, cluster);
     }
 
     private static class FutureFailure implements Future<RecordMetadata> {
