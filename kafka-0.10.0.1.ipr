@@ -311,49 +311,48 @@
   </component>
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/connect/api/api.iml" filepath="$PROJECT_DIR$/connect/api/api.iml" group="connect/api" />
-      <module fileurl="file://D:\workspace\myself\kafka-0.10.0.1\connect\api\api_main.iml" filepath="D:\workspace\myself\kafka-0.10.0.1\connect\api\api_main.iml" group="connect/api" />
-      <module fileurl="file://D:\workspace\myself\kafka-0.10.0.1\connect\api\api_test.iml" filepath="D:\workspace\myself\kafka-0.10.0.1\connect\api\api_test.iml" group="connect/api" />
-      <module fileurl="file://$PROJECT_DIR$/clients/clients.iml" filepath="$PROJECT_DIR$/clients/clients.iml" group="clients" />
-      <module fileurl="file://$PROJECT_DIR$/clients/clients_main.iml" filepath="$PROJECT_DIR$/clients/clients_main.iml" group="clients" />
-      <module fileurl="file://$PROJECT_DIR$/clients/clients_test.iml" filepath="$PROJECT_DIR$/clients/clients_test.iml" group="clients" />
-      <module fileurl="file://$PROJECT_DIR$/connect/connect.iml" filepath="$PROJECT_DIR$/connect/connect.iml" group="connect" />
-      <module fileurl="file://$PROJECT_DIR$/connect/api/connect-api_main.iml" filepath="$PROJECT_DIR$/connect/api/connect-api_main.iml" group="connect/api" />
-      <module fileurl="file://$PROJECT_DIR$/connect/api/connect-api_test.iml" filepath="$PROJECT_DIR$/connect/api/connect-api_test.iml" group="connect/api" />
-      <module fileurl="file://$PROJECT_DIR$/connect/connect_main.iml" filepath="$PROJECT_DIR$/connect/connect_main.iml" group="connect" />
-      <module fileurl="file://$PROJECT_DIR$/connect/connect_test.iml" filepath="$PROJECT_DIR$/connect/connect_test.iml" group="connect" />
-      <module fileurl="file://$PROJECT_DIR$/core/core.iml" filepath="$PROJECT_DIR$/core/core.iml" group="core" />
-      <module fileurl="file://$PROJECT_DIR$/core/core_main.iml" filepath="$PROJECT_DIR$/core/core_main.iml" group="core" />
-      <module fileurl="file://$PROJECT_DIR$/core/core_scoverage.iml" filepath="$PROJECT_DIR$/core/core_scoverage.iml" group="core" />
-      <module fileurl="file://$PROJECT_DIR$/core/core_test.iml" filepath="$PROJECT_DIR$/core/core_test.iml" group="core" />
-      <module fileurl="file://$PROJECT_DIR$/core/core_testScoverage.iml" filepath="$PROJECT_DIR$/core/core_testScoverage.iml" group="core" />
-      <module fileurl="file://$PROJECT_DIR$/connect/file/file.iml" filepath="$PROJECT_DIR$/connect/file/file.iml" group="connect/file" />
-      <module fileurl="file://$PROJECT_DIR$/connect/file/file_main.iml" filepath="$PROJECT_DIR$/connect/file/file_main.iml" group="connect/file" />
-      <module fileurl="file://$PROJECT_DIR$/connect/file/file_test.iml" filepath="$PROJECT_DIR$/connect/file/file_test.iml" group="connect/file" />
-      <module fileurl="file://$PROJECT_DIR$/connect/json/json.iml" filepath="$PROJECT_DIR$/connect/json/json.iml" group="connect/json" />
-      <module fileurl="file://$PROJECT_DIR$/connect/json/json_main.iml" filepath="$PROJECT_DIR$/connect/json/json_main.iml" group="connect/json" />
-      <module fileurl="file://$PROJECT_DIR$/connect/json/json_test.iml" filepath="$PROJECT_DIR$/connect/json/json_test.iml" group="connect/json" />
+      <module fileurl="file://$PROJECT_DIR$/connect/api/api.iml" filepath="$PROJECT_DIR$/connect/api/api.iml" group="kafka-0.10.0.1/connect/api" />
+      <module fileurl="file://$PROJECT_DIR$/connect/api/api_main.iml" filepath="$PROJECT_DIR$/connect/api/api_main.iml" group="connect/api" />
+      <module fileurl="file://$PROJECT_DIR$/connect/api/api_test.iml" filepath="$PROJECT_DIR$/connect/api/api_test.iml" group="connect/api" />
+      <module fileurl="file://$PROJECT_DIR$/clients/clients.iml" filepath="$PROJECT_DIR$/clients/clients.iml" group="kafka-0.10.0.1/clients" />
+      <module fileurl="file://$PROJECT_DIR$/clients/clients_main.iml" filepath="$PROJECT_DIR$/clients/clients_main.iml" group="kafka-0.10.0.1/clients" />
+      <module fileurl="file://$PROJECT_DIR$/clients/clients_test.iml" filepath="$PROJECT_DIR$/clients/clients_test.iml" group="kafka-0.10.0.1/clients" />
+      <module fileurl="file://$PROJECT_DIR$/connect/connect.iml" filepath="$PROJECT_DIR$/connect/connect.iml" group="kafka-0.10.0.1/connect" />
+      <module fileurl="file://$PROJECT_DIR$/connect/api/connect-api_main.iml" filepath="$PROJECT_DIR$/connect/api/connect-api_main.iml" group="kafka-0.10.0.1/connect/api" />
+      <module fileurl="file://$PROJECT_DIR$/connect/api/connect-api_test.iml" filepath="$PROJECT_DIR$/connect/api/connect-api_test.iml" group="kafka-0.10.0.1/connect/api" />
+      <module fileurl="file://$PROJECT_DIR$/connect/connect_main.iml" filepath="$PROJECT_DIR$/connect/connect_main.iml" group="kafka-0.10.0.1/connect" />
+      <module fileurl="file://$PROJECT_DIR$/connect/connect_test.iml" filepath="$PROJECT_DIR$/connect/connect_test.iml" group="kafka-0.10.0.1/connect" />
+      <module fileurl="file://$PROJECT_DIR$/core/core.iml" filepath="$PROJECT_DIR$/core/core.iml" group="kafka-0.10.0.1/core" />
+      <module fileurl="file://$PROJECT_DIR$/core/core_main.iml" filepath="$PROJECT_DIR$/core/core_main.iml" group="kafka-0.10.0.1/core" />
+      <module fileurl="file://$PROJECT_DIR$/core/core_scoverage.iml" filepath="$PROJECT_DIR$/core/core_scoverage.iml" group="kafka-0.10.0.1/core" />
+      <module fileurl="file://$PROJECT_DIR$/core/core_test.iml" filepath="$PROJECT_DIR$/core/core_test.iml" group="kafka-0.10.0.1/core" />
+      <module fileurl="file://$PROJECT_DIR$/core/core_testScoverage.iml" filepath="$PROJECT_DIR$/core/core_testScoverage.iml" group="kafka-0.10.0.1/core" />
+      <module fileurl="file://$PROJECT_DIR$/connect/file/file.iml" filepath="$PROJECT_DIR$/connect/file/file.iml" group="kafka-0.10.0.1/connect/file" />
+      <module fileurl="file://$PROJECT_DIR$/connect/file/file_main.iml" filepath="$PROJECT_DIR$/connect/file/file_main.iml" group="kafka-0.10.0.1/connect/file" />
+      <module fileurl="file://$PROJECT_DIR$/connect/file/file_test.iml" filepath="$PROJECT_DIR$/connect/file/file_test.iml" group="kafka-0.10.0.1/connect/file" />
+      <module fileurl="file://$PROJECT_DIR$/connect/json/json.iml" filepath="$PROJECT_DIR$/connect/json/json.iml" group="kafka-0.10.0.1/connect/json" />
+      <module fileurl="file://$PROJECT_DIR$/connect/json/json_main.iml" filepath="$PROJECT_DIR$/connect/json/json_main.iml" group="kafka-0.10.0.1/connect/json" />
+      <module fileurl="file://$PROJECT_DIR$/connect/json/json_test.iml" filepath="$PROJECT_DIR$/connect/json/json_test.iml" group="kafka-0.10.0.1/connect/json" />
       <module fileurl="file://$PROJECT_DIR$/kafka-0.10.0.1.iml" filepath="$PROJECT_DIR$/kafka-0.10.0.1.iml" />
-      <module fileurl="file://$PROJECT_DIR$/examples/kafka-0.10.0.1-examples.iml" filepath="$PROJECT_DIR$/examples/kafka-0.10.0.1-examples.iml" group="examples" />
-      <module fileurl="file://$PROJECT_DIR$/examples/kafka-0.10.0.1-examples_main.iml" filepath="$PROJECT_DIR$/examples/kafka-0.10.0.1-examples_main.iml" group="examples" />
-      <module fileurl="file://$PROJECT_DIR$/examples/kafka-0.10.0.1-examples_test.iml" filepath="$PROJECT_DIR$/examples/kafka-0.10.0.1-examples_test.iml" group="examples" />
-      <module fileurl="file://$PROJECT_DIR$/kafka-0.10.0.1_main.iml" filepath="$PROJECT_DIR$/kafka-0.10.0.1_main.iml" group="kafka-0.10.0.1" />
-      <module fileurl="file://$PROJECT_DIR$/kafka-0.10.0.1_test.iml" filepath="$PROJECT_DIR$/kafka-0.10.0.1_test.iml" group="kafka-0.10.0.1" />
-      <module fileurl="file://$PROJECT_DIR$/log4j-appender/log4j-appender.iml" filepath="$PROJECT_DIR$/log4j-appender/log4j-appender.iml" group="log4j-appender" />
-      <module fileurl="file://$PROJECT_DIR$/log4j-appender/log4j-appender_main.iml" filepath="$PROJECT_DIR$/log4j-appender/log4j-appender_main.iml" group="log4j-appender" />
-      <module fileurl="file://$PROJECT_DIR$/log4j-appender/log4j-appender_test.iml" filepath="$PROJECT_DIR$/log4j-appender/log4j-appender_test.iml" group="log4j-appender" />
-      <module fileurl="file://$PROJECT_DIR$/connect/runtime/runtime.iml" filepath="$PROJECT_DIR$/connect/runtime/runtime.iml" group="connect/runtime" />
-      <module fileurl="file://$PROJECT_DIR$/connect/runtime/runtime_main.iml" filepath="$PROJECT_DIR$/connect/runtime/runtime_main.iml" group="connect/runtime" />
-      <module fileurl="file://$PROJECT_DIR$/connect/runtime/runtime_test.iml" filepath="$PROJECT_DIR$/connect/runtime/runtime_test.iml" group="connect/runtime" />
-      <module fileurl="file://$PROJECT_DIR$/streams/streams.iml" filepath="$PROJECT_DIR$/streams/streams.iml" group="streams" />
-      <module fileurl="file://$PROJECT_DIR$/streams/examples/streams-examples.iml" filepath="$PROJECT_DIR$/streams/examples/streams-examples.iml" group="streams/examples" />
-      <module fileurl="file://$PROJECT_DIR$/streams/examples/streams-examples_main.iml" filepath="$PROJECT_DIR$/streams/examples/streams-examples_main.iml" group="streams/examples" />
-      <module fileurl="file://$PROJECT_DIR$/streams/examples/streams-examples_test.iml" filepath="$PROJECT_DIR$/streams/examples/streams-examples_test.iml" group="streams/examples" />
-      <module fileurl="file://$PROJECT_DIR$/streams/streams_main.iml" filepath="$PROJECT_DIR$/streams/streams_main.iml" group="streams" />
-      <module fileurl="file://$PROJECT_DIR$/streams/streams_test.iml" filepath="$PROJECT_DIR$/streams/streams_test.iml" group="streams" />
-      <module fileurl="file://$PROJECT_DIR$/tools/tools.iml" filepath="$PROJECT_DIR$/tools/tools.iml" group="tools" />
-      <module fileurl="file://$PROJECT_DIR$/tools/tools_main.iml" filepath="$PROJECT_DIR$/tools/tools_main.iml" group="tools" />
-      <module fileurl="file://$PROJECT_DIR$/tools/tools_test.iml" filepath="$PROJECT_DIR$/tools/tools_test.iml" group="tools" />
+      <module fileurl="file://$PROJECT_DIR$/examples/kafka-0.10.0.1-examples.iml" filepath="$PROJECT_DIR$/examples/kafka-0.10.0.1-examples.iml" group="kafka-0.10.0.1/examples" />
+      <module fileurl="file://$PROJECT_DIR$/examples/kafka-0.10.0.1-examples_main.iml" filepath="$PROJECT_DIR$/examples/kafka-0.10.0.1-examples_main.iml" group="kafka-0.10.0.1/examples" />
+      <module fileurl="file://$PROJECT_DIR$/examples/kafka-0.10.0.1-examples_test.iml" filepath="$PROJECT_DIR$/examples/kafka-0.10.0.1-examples_test.iml" group="kafka-0.10.0.1/examples" />
+      <module fileurl="file://$PROJECT_DIR$/log4j-appender/log4j-appender.iml" filepath="$PROJECT_DIR$/log4j-appender/log4j-appender.iml" group="kafka-0.10.0.1/log4j-appender" />
+      <module fileurl="file://$PROJECT_DIR$/log4j-appender/log4j-appender_main.iml" filepath="$PROJECT_DIR$/log4j-appender/log4j-appender_main.iml" group="kafka-0.10.0.1/log4j-appender" />
+      <module fileurl="file://$PROJECT_DIR$/log4j-appender/log4j-appender_test.iml" filepath="$PROJECT_DIR$/log4j-appender/log4j-appender_test.iml" group="kafka-0.10.0.1/log4j-appender" />
+      <module fileurl="file://$PROJECT_DIR$/org.apache.kafka-kafka-0.10.0.1.iml" filepath="$PROJECT_DIR$/org.apache.kafka-kafka-0.10.0.1.iml" group="kafka-0.10.0.1" />
+      <module fileurl="file://$PROJECT_DIR$/connect/runtime/runtime.iml" filepath="$PROJECT_DIR$/connect/runtime/runtime.iml" group="kafka-0.10.0.1/connect/runtime" />
+      <module fileurl="file://$PROJECT_DIR$/connect/runtime/runtime_main.iml" filepath="$PROJECT_DIR$/connect/runtime/runtime_main.iml" group="kafka-0.10.0.1/connect/runtime" />
+      <module fileurl="file://$PROJECT_DIR$/connect/runtime/runtime_test.iml" filepath="$PROJECT_DIR$/connect/runtime/runtime_test.iml" group="kafka-0.10.0.1/connect/runtime" />
+      <module fileurl="file://$PROJECT_DIR$/streams/streams.iml" filepath="$PROJECT_DIR$/streams/streams.iml" group="kafka-0.10.0.1/streams" />
+      <module fileurl="file://$PROJECT_DIR$/streams/examples/streams-examples.iml" filepath="$PROJECT_DIR$/streams/examples/streams-examples.iml" group="kafka-0.10.0.1/streams/examples" />
+      <module fileurl="file://$PROJECT_DIR$/streams/examples/streams-examples_main.iml" filepath="$PROJECT_DIR$/streams/examples/streams-examples_main.iml" group="kafka-0.10.0.1/streams/examples" />
+      <module fileurl="file://$PROJECT_DIR$/streams/examples/streams-examples_test.iml" filepath="$PROJECT_DIR$/streams/examples/streams-examples_test.iml" group="kafka-0.10.0.1/streams/examples" />
+      <module fileurl="file://$PROJECT_DIR$/streams/streams_main.iml" filepath="$PROJECT_DIR$/streams/streams_main.iml" group="kafka-0.10.0.1/streams" />
+      <module fileurl="file://$PROJECT_DIR$/streams/streams_test.iml" filepath="$PROJECT_DIR$/streams/streams_test.iml" group="kafka-0.10.0.1/streams" />
+      <module fileurl="file://$PROJECT_DIR$/tools/tools.iml" filepath="$PROJECT_DIR$/tools/tools.iml" group="kafka-0.10.0.1/tools" />
+      <module fileurl="file://$PROJECT_DIR$/tools/tools_main.iml" filepath="$PROJECT_DIR$/tools/tools_main.iml" group="kafka-0.10.0.1/tools" />
+      <module fileurl="file://$PROJECT_DIR$/tools/tools_test.iml" filepath="$PROJECT_DIR$/tools/tools_test.iml" group="kafka-0.10.0.1/tools" />
     </modules>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="JDK1.8.0_161" project-jdk-type="JavaSDK">
@@ -1420,7 +1419,6 @@
     </library>
     <library name="Gradle: org.scala-lang:scala-library:2.10.6" type="Scala">
       <properties>
-        <option name="languageLevel" value="Scala_2_10" />
         <compiler-classpath>
           <root url="file://$MAVEN_REPOSITORY$/caches/modules-2/files-2.1/org.scala-lang/scala-compiler/2.10.6/9b15174852f5b6bb1edbf303d5722286a0a54011/scala-compiler-2.10.6.jar" />
           <root url="file://$MAVEN_REPOSITORY$/caches/modules-2/files-2.1/org.scala-lang/scala-library/2.10.6/421989aa8f95a05a4f894630aad96b8c7b828732/scala-library-2.10.6.jar" />

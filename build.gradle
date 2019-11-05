@@ -95,24 +95,6 @@ ext {
 apply from: "$rootDir/gradle/dependencies.gradle"
 apply from: file('wrapper.gradle')
 
-if (new File('.git').exists()) {
-  apply from: file('gradle/rat.gradle')
-  rat {
-    // Exclude everything under the directory that git should be ignoring via .gitignore or that isn't checked in. These
-    // restrict us only to files that are checked in or are staged.
-    def repo = Grgit.open(project.file('.'))
-    excludes = new ArrayList<String>(repo.clean(ignore: false, directories: true, dryRun: true))
-    // And some of the files that we have checked in should also be excluded from this check
-    excludes.addAll([
-        '**/.git/**',
-        '**/build/**',
-        'CONTRIBUTING.md',
-        'gradlew',
-        'gradlew.bat',
-        '**/README.md'
-    ])
-  }
-}
 
 subprojects {
   apply plugin: 'java'
@@ -438,52 +420,6 @@ project(':core') {
     duplicatesStrategy 'exclude'
   }
 
-  systemTestLibs {
-    dependsOn testJar
-  }
-
-  task genProtocolErrorDocs(type: JavaExec) {
-    classpath = sourceSets.main.runtimeClasspath
-    main = 'org.apache.kafka.common.protocol.Errors'
-    if( !generatedDocsDir.exists() ) { generatedDocsDir.mkdirs() }
-    standardOutput = new File(generatedDocsDir, "protocol_errors.html").newOutputStream()
-  }
-
-  task genProtocolApiKeyDocs(type: JavaExec) {
-    classpath = sourceSets.main.runtimeClasspath
-    main = 'org.apache.kafka.common.protocol.ApiKeys'
-    if( !generatedDocsDir.exists() ) { generatedDocsDir.mkdirs() }
-    standardOutput = new File(generatedDocsDir, "protocol_api_keys.html").newOutputStream()
-  }
-
-  task genProtocolMessageDocs(type: JavaExec) {
-    classpath = sourceSets.main.runtimeClasspath
-    main = 'org.apache.kafka.common.protocol.Protocol'
-    if( !generatedDocsDir.exists() ) { generatedDocsDir.mkdirs() }
-    standardOutput = new File(generatedDocsDir, "protocol_messages.html").newOutputStream()
-  }
-
-  task genProducerConfigDocs(type: JavaExec) {
-    classpath = sourceSets.main.runtimeClasspath
-    main = 'org.apache.kafka.clients.producer.ProducerConfig'
-    if( !generatedDocsDir.exists() ) { generatedDocsDir.mkdirs() }
-    standardOutput = new File(generatedDocsDir, "producer_config.html").newOutputStream()
-  }
-
-  task genConsumerConfigDocs(type: JavaExec) {
-    classpath = sourceSets.main.runtimeClasspath
-    main = 'org.apache.kafka.clients.consumer.ConsumerConfig'
-    if( !generatedDocsDir.exists() ) { generatedDocsDir.mkdirs() }
-    standardOutput = new File(generatedDocsDir, "consumer_config.html").newOutputStream()
-  }
-
-  task genKafkaConfigDocs(type: JavaExec) {
-    classpath = sourceSets.main.runtimeClasspath
-    main = 'kafka.server.KafkaConfig'
-    if( !generatedDocsDir.exists() ) { generatedDocsDir.mkdirs() }
-    standardOutput = new File(generatedDocsDir, "kafka_config.html").newOutputStream()
-  }
-
   task siteDocsTar(dependsOn: ['genProtocolErrorDocs', 'genProtocolApiKeyDocs', 'genProtocolMessageDocs',
                                'genProducerConfigDocs', 'genConsumerConfigDocs', 'genKafkaConfigDocs',
                                ':connect:runtime:genConnectConfigDocs', ':streams:genStreamsConfigDocs'], type: Tar) {
@@ -702,16 +638,6 @@ project(':streams') {
     dependsOn 'copyDependantLibs'
   }
 
-  systemTestLibs {
-    dependsOn testJar
-  }
-
-  task genStreamsConfigDocs(type: JavaExec) {
-    classpath = sourceSets.main.runtimeClasspath
-    main = 'org.apache.kafka.streams.StreamsConfig'
-    if( !generatedDocsDir.exists() ) { generatedDocsDir.mkdirs() }
-    standardOutput = new File(generatedDocsDir, "streams_config.html").newOutputStream()
-  }
 }
 
 project(':streams:examples') {
@@ -874,13 +800,6 @@ project(':connect:runtime') {
 
   jar {
     dependsOn copyDependantLibs
-  }
-
-  task genConnectConfigDocs(type: JavaExec) {
-    classpath = sourceSets.main.runtimeClasspath
-    main = 'org.apache.kafka.connect.runtime.distributed.DistributedConfig'
-    if( !generatedDocsDir.exists() ) { generatedDocsDir.mkdirs() }
-    standardOutput = new File(generatedDocsDir, "connect_config.html").newOutputStream()
   }
 }
 

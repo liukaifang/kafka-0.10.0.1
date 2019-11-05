@@ -221,7 +221,7 @@ public class ConsumerNetworkClient implements Closeable {
         // ensure we don't poll any longer than the deadline for
         // the next scheduled task
         timeout = Math.min(timeout, delayedTasks.nextTimeout(now));
-        clientPoll(timeout, now);
+        clientPoll(timeout, now);  // NetworkClient.poll
         now = time.milliseconds();
 
         // handle any disconnects by failing the active requests. note that disconnects must
