@@ -26,7 +26,7 @@ import org.slf4j.LoggerFactory;
 
 /**
  * A batch of records that is or will be sent.
- *
+ * <p>
  * This class is not thread safe and external synchronization must be used when modifying it
  */
 public final class RecordBatch {
@@ -71,8 +71,9 @@ public final class RecordBatch {
             this.maxRecordSize = Math.max(this.maxRecordSize, Record.recordSize(key, value));
             this.lastAppendTime = now;
             FutureRecordMetadata future = new FutureRecordMetadata(this.produceFuture, this.recordCount, timestamp, checksum, key == null ? -1 : key.length, value == null ? -1 : value.length);
-            if (callback != null)
+            if (callback != null) {
                 thunks.add(new Thunk(callback, future));
+            }
             this.recordCount++;
             return future;
         }
@@ -82,8 +83,8 @@ public final class RecordBatch {
      * Complete the request
      *
      * @param baseOffset The base offset of the messages assigned by the server
-     * @param timestamp The timestamp returned by the broker.
-     * @param exception The exception that occurred (or null if the request was successful)
+     * @param timestamp  The timestamp returned by the broker.
+     * @param exception  The exception that occurred (or null if the request was successful)
      */
     public void done(long baseOffset, long timestamp, RuntimeException exception) {
         log.trace("Produced messages to topic-partition {} with base offset offset {} and error: {}.", topicPartition, baseOffset, exception);
@@ -130,8 +131,8 @@ public final class RecordBatch {
     /**
      * A batch whose metadata is not available should be expired if one of the following is true:
      * <ol>
-     *     <li> the batch is not in retry AND request timeout has elapsed after it is ready (full or linger.ms has reached).
-     *     <li> the batch is in retry AND request timeout has elapsed after the backoff period ended.
+     * <li> the batch is not in retry AND request timeout has elapsed after it is ready (full or linger.ms has reached).
+     * <li> the batch is in retry AND request timeout has elapsed after the backoff period ended.
      * </ol>
      */
     public boolean maybeExpire(int requestTimeoutMs, long retryBackoffMs, long now, long lingerMs, boolean isFull) {
